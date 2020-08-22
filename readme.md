@@ -1,7 +1,9 @@
 # json-translation
+[![npm](https://img.shields.io/npm/v/json-translation)](https://www.npmjs.com/package/json-translation)
 [![GitHub issues](https://img.shields.io/github/issues/GrayJacketStudios/translations)](https://github.com/GrayJacketStudios/translations/issues)
 [![GitHub license](https://img.shields.io/github/license/GrayJacketStudios/translations)](https://github.com/GrayJacketStudios/translations/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/GrayJacketStudios/translations)](https://github.com/GrayJacketStudios/translations/stargazers)
+
 
 Tool to make translations "offline" from json documents, dont having to wait for an API call or async function.
 Can be used with NodeJS or react without problem.
