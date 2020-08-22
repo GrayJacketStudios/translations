@@ -5,8 +5,8 @@ const translationFiles = require('./utils/GetFiles')
 class Translate {
 
     constructor(){
-        this.defaultLang = "en"
         this.lang = {}
+        this.separator = "."
     }
 
 
@@ -16,13 +16,9 @@ class Translate {
     }
 
 
-    setDefaultLang(lang){
-        // set the default language
-        this.defaultLang = lang
-    }
     getFiles(){
         if(this.translationPath == null){
-            throw Error("Translation PATH dont defined.")
+            throw new Error("Translation PATH dont defined.")
         }
         this.files = translationFiles(this.translationPath)
     }
@@ -34,8 +30,21 @@ class Translate {
 
     }
 
-    translate(lang=this.defaultLang, string="", defaultString=""){
-        return this.lang
+    translate(lang, string="", defaultString=""){
+        let parsed = string.split(this.separator)
+        let temp = this.lang[lang]
+        try {
+            parsed.map((item) => {
+                temp = temp[item]
+            })
+            if(temp)
+                return temp
+            else
+                return defaultString
+        } catch (error) {
+            return defaultString
+        }
+
     }
 
 
@@ -46,10 +55,10 @@ class Translate {
 
     getTranslatables(){
         this.files.map(file =>
-            this.lang[this.getLanguageName(file)] = (translationFiles.readFile(`${this.translationPath}/${file}`))
+            this.lang[this.getLanguageName(file)] = translationFiles.readFile(`${this.translationPath}/${file}`)
             )
     }
-    //#endregion
+
 
 
 }
