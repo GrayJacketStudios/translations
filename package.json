@@ -1,0 +1,36 @@
+{
+  "name": "translator",
+  "version": "1.0.0",
+  "description": "Make multiple translations, easy and fast, in the languages you need",
+  "main": "translate.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrayJacketStudios/translations.git"
+  },
+  "keywords": [
+    "translations",
+    "traductor",
+    "translate",
+    "react",
+    "nodejs",
+    "offline",
+    "local",
+    "json"
+  ],
+  "author": {
+    "name": "Sebastián Cristi",
+    "email": "contacto@scristi.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GrayJacketStudios/translations/issues",
+    "email": "bugs@scristi.com"
+  },
+  "homepage": "https://github.com/GrayJacketStudios/translations#readme",
+  "dependencies": {
+    "app-root-path": "^3.0.0"
+  }
+}

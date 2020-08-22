@@ -1,0 +1,10 @@
+{
+    "exampe_section": {
+        "translation_1": "Lorem ipsum dolor sit amet",
+        "translation_2": "consectetur adipiscing elit, sed do eiusmod tempor"
+    },
+    "second_section": {
+        "button_send": "Enviar",
+        "button_cancel": "Cancelar"
+    }
+}
