@@ -6,7 +6,7 @@
 
 
 Tool to make translations "offline" from json documents, dont having to wait for an API call or async function.
-Can be used with NodeJS or react without problem.
+Can be used with NodeJS without problem.
 
 ## Instalation
 To install it just run:
@@ -83,6 +83,3 @@ and access the information like this:
     }
 }
 ```
-
-## Living demo
-You can see this package working on www.scristi.com
