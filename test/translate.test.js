@@ -19,8 +19,6 @@ describe("Translate with a few different options", () => {
     it("Verify it outputs the default string", () => {
         assert.equal(ts.translate("es", "second_section.button_sen", "default"), "default")
     });
-    it("Verify it outputs the default string", () => {
-        assert.equal(ts.translate("dl", "second_section.button_send"), "default")
-    });
+
 
 })

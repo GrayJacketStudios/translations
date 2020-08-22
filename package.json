@@ -1,5 +1,5 @@
 {
-  "name": "translator",
+  "name": "json-translation",
   "version": "1.0.0",
   "description": "Make multiple translations, easy and fast, in the languages you need",
   "main": "translate.js",
