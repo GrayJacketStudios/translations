@@ -1,9 +1,10 @@
-var path = require('path');
+const path = require('path');
 const fs = require('fs');
 
 const util = require('util');
 
 const readdir = util.promisify(fs.readdir);
+const fsReadFile = util.promisify(fs.readFile);
 
 module.exports = (path) => {
   return new Promise((resolve, reject) => {
@@ -17,6 +18,15 @@ module.exports = (path) => {
     });
   });
 }
+
+module.exports.readFile = (file) =>
+  new Promise((resolve, reject) => {
+    fs.readFile(file, (err, data) => {
+      if (err) reject(err)
+
+      else resolve(JSON.parse(data))
+    })
+})
 
 
 
