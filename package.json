@@ -14,11 +14,12 @@
     "translations",
     "traductor",
     "translate",
-    "react",
     "nodejs",
     "offline",
     "local",
-    "json"
+    "json",
+    "language",
+    "lang"
   ],
   "author": {
     "name": "Sebastián Cristi",
