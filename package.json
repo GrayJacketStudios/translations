@@ -30,7 +30,5 @@
     "email": "bugs@scristi.com"
   },
   "homepage": "https://github.com/GrayJacketStudios/translations#readme",
-  "dependencies": {
-    "app-root-path": "^3.0.0"
-  }
+  "dependencies": {}
 }
