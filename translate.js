@@ -20,38 +20,34 @@ class Translate {
         // set the default language
         this.defaultLang = lang
     }
-    async getFiles(){
+    getFiles(){
         if(this.translationPath == null){
             throw Error("Translation PATH dont defined.")
         }
-        this.files = await translationFiles(this.translationPath)
+        this.files = translationFiles(this.translationPath)
     }
 
-    async init(){
+    init(){
         // Load the translations files
-        await this.getFiles()
-        await this.getTranslatables()
+        this.getFiles()
+        this.getTranslatables()
 
     }
 
+    translate(lang=this.defaultLang, string="", defaultString=""){
+        return this.lang
+    }
 
 
     getLanguageName(file){
         // Return the name of the language from the filename
         return (file.split("."))[0]
     }
-    //#region Assign translations to languages
-    async assignFileToDict(item){
-        this.lang[this.getLanguageName(item)] = (await translationFiles.readFile(`${this.translationPath}/${item}`))
-        return Promise.resolve(this.lang)
-    }
 
-    async asyncGetLang(file){
-        return this.assignFileToDict(file)
-    }
-
-    async getTranslatables(){
-        return Promise.all(this.files.map(file => this.asyncGetLang(file)))
+    getTranslatables(){
+        this.files.map(file =>
+            this.lang[this.getLanguageName(file)] = (translationFiles.readFile(`${this.translationPath}/${file}`))
+            )
     }
     //#endregion
 
