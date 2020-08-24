@@ -8,7 +8,7 @@
 Tool to make translations "offline" from json documents, dont having to wait for an API call or async function.
 Can be used with NodeJS without problem.
 
-## Instalation
+## Installation
 To install it just run:
 `npm i json-translation -s`
 
